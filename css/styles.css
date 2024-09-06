@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
@@ -21,20 +25,23 @@ img {
     margin: 0;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+    background-color: #F5F5F5;
+}
 
 .gallery {
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     gap: 24px;
     max-width: 1440px;
-    margin: auto;
     padding: 24px 156px;
-    background-color: #fff;
-
-
+    margin: auto;
 }
 
 .gallery-item {
@@ -43,32 +50,24 @@ img {
 }
 .gallery-item:hover {
     transform: scale(1.04);
-    cursor: pointer;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="%234e75ff" d="M10.296 29.025c.24.199.542.308.853.308h14.184A2.668 2.668 0 0 0 28 26.666v-9.613a2.665 2.665 0 0 0-2.372-2.65L16 13.332v-8a2.668 2.668 0 0 0-5.334 0v16l-4.04-1.616a2.664 2.664 0 0 0-3.521 1.634l-.151.453a1.333 1.333 0 0 0 .412 1.445l6.929 5.776z"/></svg>') 16 16, pointer;
+
 }
 
-.gallery-link {}
+.gallery-link {
+    
+}
 
 .gallery-image {
-
 
 }
 
 .module {
-position: fixed;
 width: 1440px;
-
 padding: 28px 164px;
 background-color: rgb(46, 47, 66, 0.8);
-top: 50%;
-left: 50%;
-transform: translate(-50%, -108%);
-
-z-index: 1000;
 }
 
 .module img {
-
     width: 1112px;
-    top: 0;
-    
 }

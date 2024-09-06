@@ -97,8 +97,13 @@ function onCardClick(event) {
     return
     };
 
+    event.preventDefault();
+    // if (!event.target.classList.contains('gallery-image')) {
+    //     return;
+    // }
+
 const currentEl = event.target.closest('.gallery-item');
-console.log(currentEl);
+
 
 
     const instance = basicLightbox.create(`
@@ -108,7 +113,12 @@ console.log(currentEl);
     />
     </div>
 `);
-instance.show()
+    instance.show()
+    
+        const modalImage = document.querySelector('.module img');
+    modalImage.addEventListener('click', () => {
+        instance.close();
+    });
 };
 
 
